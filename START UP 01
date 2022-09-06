@@ -1,0 +1,41 @@
+-- vissar alla tabel värder
+
+SELECT * FROM bestsell
+_______________________________
+
+-- visar bara rubrik
+
+SELECT title FROM bestsell
+__________________________________
+-- vissar relase, title från bestsell schema
+
+SELECT release, title, FROM bestsell
+_______________________________________
+
+SELECT release, title, critic FROM bestsell
+
+___________________/*/__________________
+-- select distinct tar bara ram unik data 
+
+SELECT DISTINCT SOLD FROM bestsell
+___________________/*/_________________________
+-- vissa bara  sold större än 30 000 000 
+SELECT * FROM bestsell where (sold > 30000000)
+________________________________________________
+-- två variablr
+SELECT * FROM bestsell where (sold > 30000000) and (critic >= 90)
+__________________________________________________________
+-- samma som före med or ...
+SELECT * FROM bestsell where ((sold > 30000000) and (critic >= 90)) or (critic < 80)
+________________________/*/________________________________________
+-- were not ex
+SELECT * FROM bestsell
+WHERE NOT TITLE='Minecraft';
+___________________________/*/________________________________
+-- sorterat ( desc är sortering kommando)  
+SELECT * FROM bestsell order by sold desc
+__________________________________________________________
+två sortering 
+SElECT * FROM bestsell order by sold desc, release desc 
+_________________________________________________
+
